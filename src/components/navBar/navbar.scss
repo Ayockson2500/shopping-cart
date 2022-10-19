@@ -1,0 +1,29 @@
+.nav-bar {
+    position: sticky;
+    top: 0;
+    
+    a {
+        text-decoration: none;
+    }
+    button {
+        height: 50px;
+        width: 50px;
+        background: transparent;
+        border-radius: 50%;
+        border: 1px solid;
+        position: relative;
+        
+        .cart-icon {
+            color: blue !important;
+        }
+        .cart-counter {
+            height: 1.5rem;
+            width: 1.5rem;
+            position: absolute;
+            bottom: -10px;
+            right: 5px;
+            color: white;
+        }
+
+    }
+}

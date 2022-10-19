@@ -1,0 +1,27 @@
+.nav-bar {
+  position: -webkit-sticky;
+  position: sticky;
+}
+.nav-bar a {
+  text-decoration: none;
+}
+.nav-bar button {
+  height: 50px;
+  width: 50px;
+  background: transparent;
+  border-radius: 50%;
+  border: 1px solid;
+  position: relative;
+}
+.nav-bar button .cart-icon {
+  color: blue !important;
+}
+.nav-bar button .cart-counter {
+  height: 1.5rem;
+  width: 1.5rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(25% 25%);
+  color: white;
+}/*# sourceMappingURL=navbar.css.map */
