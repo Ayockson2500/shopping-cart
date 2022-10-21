@@ -4,7 +4,7 @@ import { useShoppingCart } from "../context/ShoppingCartContext";
 import CartItem from "../components/CartItem";
 import { storeItems } from "./data/items";
 import formatCurrency from "../utils/formatCurrency";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 type shoppingCartProps = {
   isOpen?: boolean;
