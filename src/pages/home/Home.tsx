@@ -1,8 +1,11 @@
 import React from 'react'
+import CheckOut from '../checkOut/CheckOut'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <CheckOut />
+    </div>
   )
 }
 
