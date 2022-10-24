@@ -6,7 +6,7 @@ type inputFieldProps = {
   type: string;
   label?: string;
   className: string
-  onChange?: () => void;
+  onChange: () => string[];
 };
 
 const InputField = ({
