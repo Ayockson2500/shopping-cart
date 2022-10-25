@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import { Button } from "react-bootstrap";
 import InputField from "../../components/form/InputField";
 import "./checkOut.scss";
-
 
 const CheckOut = () => {
   const [inputValue, setInputValue] = useState({
@@ -13,9 +12,24 @@ const CheckOut = () => {
     cv: "",
   });
 
-  const handleFormSubmit = (e: React.ChangeEvent<HTMLInputElement>) => {
-    e.preventDefault()
-  }
+  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log('submitted');
+
+  };
+
+
+  const handleClearInputData = () => {
+
+    setInputValue({
+      ...inputValue,
+      cardholder: "",
+      cardNumber: "",
+      month: "",
+      year: "",
+      cv: "",
+    });
+  };
 
   return (
     <>
@@ -80,7 +94,13 @@ const CheckOut = () => {
           </div>
         </div>
         <div className="text-center">
-          <Button style={{ width: "50%", marginTop: "20px" }}>Proceed</Button>
+          <Button
+            onClick={handleClearInputData}
+            type="submit"
+            style={{ width: "50%", marginTop: "20px" }}
+          >
+            Proceed
+          </Button>
         </div>
       </form>
     </>
