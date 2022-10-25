@@ -16,11 +16,13 @@ const CheckOut = () => {
     e.preventDefault();
     localStorage.setItem('paymentData', JSON.stringify(inputValue))
 
+    setTimeout(() => {
+      handleClearInputData()
+    }, 1000)
   };
 
 
   const handleClearInputData = () => {
-
     setInputValue({
       ...inputValue,
       cardholder: "",
@@ -95,7 +97,6 @@ const CheckOut = () => {
         </div>
         <div className="text-center">
           <Button
-            onClick={handleClearInputData}
             type="submit"
             style={{ width: "50%", marginTop: "20px" }}
           >
