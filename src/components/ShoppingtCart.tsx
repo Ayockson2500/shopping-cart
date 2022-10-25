@@ -1,17 +1,25 @@
-import React from "react";
-import { Offcanvas, Stack } from "react-bootstrap";
+import { Offcanvas, Stack, Button } from "react-bootstrap";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import CartItem from "../components/CartItem";
 import { storeItems } from "./data/items";
 import formatCurrency from "../utils/formatCurrency";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 type shoppingCartProps = {
   isOpen?: boolean;
 };
 
-const ShoppingtCart = ({ isOpen }: shoppingCartProps) => {
+const ShoppingtCart = ({ isOpen, }: shoppingCartProps) => {
   const { closeCart, cartItems } = useShoppingCart();
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate('/checkout')
+
+    setTimeout(() => {
+      closeCart()
+    }, 100)
+  }
 
   return (
     <>
@@ -35,12 +43,10 @@ const ShoppingtCart = ({ isOpen }: shoppingCartProps) => {
                 }, 0)
               )}
             </div>
+            <Button onClick={handleNavigate}>Procceed</Button>
           </Stack>
         </Offcanvas.Body>
       </Offcanvas>
-      <div>
-        {/* <Link to="/checkout">Check Out</Link> */}
-      </div>
     </>
   );
 };
