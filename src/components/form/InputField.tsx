@@ -6,7 +6,7 @@ type inputFieldProps = {
   type: string;
   label?: string;
   className: string
-  onChange: () => string[];
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
 const InputField = ({
