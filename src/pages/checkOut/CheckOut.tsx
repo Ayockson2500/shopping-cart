@@ -14,7 +14,7 @@ const CheckOut = () => {
 
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log('submitted');
+    localStorage.setItem('paymentData', JSON.stringify(inputValue))
 
   };
 
